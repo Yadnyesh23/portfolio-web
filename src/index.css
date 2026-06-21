@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Outfit', 'Inter', sans-serif;
+  --font-mono: 'Fira Code', monospace;
+
+  --color-bg:       #0D0D0D;
+  --color-card:     #1A1A1A;
+  --color-border:   #222222;
+  --color-accent:   #FF5500;
+  --color-ghost:    #1E1E1E;
+  --color-fg:       #FFFFFF;
+  --color-muted:    #888888;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #0D0D0D;
+    color: #FFFFFF;
+  }
+
+  body {
+    background-color: #0D0D0D;
+    color: #FFFFFF;
+    overflow-x: hidden;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: #0D0D0D; }
+  ::-webkit-scrollbar-thumb { background: #2A2A2A; border-radius: 9999px; }
+  ::-webkit-scrollbar-thumb:hover { background: #FF5500; }
+
+  /* Selection */
+  ::selection { background: rgba(255, 85, 0, 0.3); color: #FFFFFF; }
+}
+
+@layer utilities {
+  /* Ghost text for two-tone headings */
+  .text-ghost {
+    color: #1E1E1E;
+  }
+
+  /* Orange glow */
+  .glow-accent {
+    box-shadow: 0 0 32px rgba(255, 85, 0, 0.25);
+  }
+
+  /* Profile card white */
+  .profile-card {
+    background: #FFFFFF;
+    border-radius: 24px;
+  }
+
+  /* Input dark style */
+  .input-dark {
+    background: #1A1A1A;
+    border: 1px solid #2A2A2A;
+    color: #FFFFFF;
+    outline: none;
+    transition: border-color 0.2s ease;
+  }
+
+  .input-dark:focus {
+    border-color: #FF5500;
+  }
+
+  .input-dark::placeholder {
+    color: #444444;
+  }
+}

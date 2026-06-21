@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "AWS Certified Solutions Architect",
+    "issuer": "Amazon Web Services (AWS)",
+    "date": "Aug 2025",
+    "type": "certification",
+    "credentialId": "AWS-ASA-998877",
+    "verifyLink": "https://aws.amazon.com/verification"
+  },
+  {
+    "id": 2,
+    "title": "React Advanced Security & Performance Certification",
+    "issuer": "Frontend Masters",
+    "date": "Jan 2025",
+    "type": "certification",
+    "credentialId": "FM-RSP-112233",
+    "verifyLink": "https://frontendmasters.com/certificates"
+  },
+  {
+    "id": 3,
+    "title": "Vercel Ship Hackathon First Place Winner",
+    "issuer": "Vercel",
+    "date": "Oct 2025",
+    "type": "hackathon",
+    "project": "Aura Config Generator",
+    "description": "Built a visual system that auto-compiles standard design styles into optimized Tailwind code blocks."
+  },
+  {
+    "id": 4,
+    "title": "Stanford TreeHacks Best Design & UX Award",
+    "issuer": "Stanford University",
+    "date": "Feb 2020",
+    "type": "hackathon",
+    "project": "Reflect Journal",
+    "description": "Created a lightweight, peer-to-peer journaling web app utilizing local synchronization protocols."
+  }
+]

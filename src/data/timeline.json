@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "year": "2026",
+    "title": "Joined Vercel as Senior Frontend Engineer",
+    "description": "Appointed to lead the design engineering and visual performance optimizer team.",
+    "category": "work"
+  },
+  {
+    "id": 2,
+    "year": "2025",
+    "title": "Won first place at Vercel Ship Hackathon",
+    "description": "Coded Aura Config Generator, parsing design tokens directly into production code blocks.",
+    "category": "award"
+  },
+  {
+    "id": 3,
+    "year": "2022",
+    "title": "Joined Linear App as Frontend Engineer",
+    "description": "Shipped keyboard shortcut system and optimized list windowing scripts.",
+    "category": "work"
+  },
+  {
+    "id": 4,
+    "year": "2021",
+    "title": "Graduated from Stanford University (MS CS)",
+    "description": "Specialized in HCI and high-performance graphic rendering.",
+    "category": "education"
+  },
+  {
+    "id": 5,
+    "year": "2019",
+    "title": "Graduated from IIT Bombay (B.Tech CSE)",
+    "description": "Studied core computing sciences and algorithms. Managed design team for TechFest.",
+    "category": "education"
+  }
+]

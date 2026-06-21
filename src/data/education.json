@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "institution": "Stanford University",
+    "degree": "Master of Science",
+    "major": "Computer Science (HCI Specialization)",
+    "location": "Stanford, CA",
+    "timeline": "Sep 2019 - Jun 2021",
+    "gpa": "3.92 / 4.00",
+    "description": "Specialized in Human-Computer Interaction, computer graphics, and design systems. Researched web interaction performance and accessibility standards."
+  },
+  {
+    "id": 2,
+    "institution": "Indian Institute of Technology, Bombay",
+    "degree": "Bachelor of Technology",
+    "major": "Computer Science & Engineering",
+    "location": "Mumbai, India",
+    "timeline": "Jul 2015 - May 2019",
+    "gpa": "9.1 / 10.0",
+    "description": "Solid foundation in data structures, algorithms, system engineering, and database management. Acted as Head of Design for the annual Technical Festival."
+  }
+]

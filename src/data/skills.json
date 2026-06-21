@@ -1,0 +1,44 @@
+{
+  "Programming Languages": [
+    { "name": "Python", "level": "Expert" },
+    { "name": "JavaScript", "level": "Expert" },
+    { "name": "TypeScript", "level": "Advanced" },
+    { "name": "SQL", "level": "Advanced" },
+    { "name": "C++", "level": "Intermediate" }
+  ],
+  "AI & Machine Learning": [
+    { "name": "TensorFlow", "level": "Advanced" },
+    { "name": "PyTorch", "level": "Advanced" },
+    { "name": "scikit-learn", "level": "Expert" },
+    { "name": "OpenAI API", "level": "Expert" },
+    { "name": "LangChain", "level": "Advanced" },
+    { "name": "Hugging Face", "level": "Advanced" }
+  ],
+  "Frontend": [
+    { "name": "React.js", "level": "Expert" },
+    { "name": "Next.js", "level": "Advanced" },
+    { "name": "Tailwind CSS", "level": "Expert" },
+    { "name": "Framer Motion", "level": "Advanced" },
+    { "name": "HTML5 / CSS3", "level": "Expert" }
+  ],
+  "Backend": [
+    { "name": "Node.js", "level": "Advanced" },
+    { "name": "FastAPI", "level": "Advanced" },
+    { "name": "Express.js", "level": "Advanced" },
+    { "name": "Flask", "level": "Intermediate" }
+  ],
+  "Databases": [
+    { "name": "PostgreSQL", "level": "Advanced" },
+    { "name": "MongoDB", "level": "Advanced" },
+    { "name": "Redis", "level": "Intermediate" },
+    { "name": "Pinecone", "level": "Intermediate" }
+  ],
+  "Tools & Technologies": [
+    { "name": "Git & GitHub", "level": "Expert" },
+    { "name": "Docker", "level": "Intermediate" },
+    { "name": "Jupyter Notebook", "level": "Expert" },
+    { "name": "Figma", "level": "Advanced" },
+    { "name": "VS Code", "level": "Expert" },
+    { "name": "Vercel", "level": "Expert" }
+  ]
+}

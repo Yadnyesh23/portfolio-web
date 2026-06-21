@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "title": "Incuverse 1.0",
+    "timeline": "4th October 2025",
+    "location": "Somaiya University, Vidhyavihar",
+    "description": "2nd Runner Up. Built teslearn.com a personalised learning platform for students (celebirty podcasts, comic books, animation video lessons, mindmaps, etc)",
+    "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=100&h=100&fit=crop",
+    "links": [
+      { "label": "Demo", "url": "#", "icon": "play" },
+      { "label": "Certificate", "url": "#", "icon": "triangle" },
+      { "label": "Winning Photo", "url": "#", "icon": "triangle" }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Minithon",
+    "timeline": "19th September 2025",
+    "location": "TSEC, Bandra (W)",
+    "description": "Built an mini calculator to calculate carbon footprints",
+    "image": "https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=100&h=100&fit=crop",
+    "links": [
+      { "label": "Certificate", "url": "#", "icon": "triangle" }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Ideathon",
+    "timeline": "13th September 2025",
+    "location": "VPPCOE, Sion (E)",
+    "description": "Built RAPID, an AI powered offline app that helps people before, during, after disaster",
+    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=100&h=100&fit=crop",
+    "links": [
+      { "label": "Certificate", "url": "#", "icon": "triangle" }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "SaaS Launchpad",
+    "timeline": "19th August 2025",
+    "location": "Vidyalankar Institute of Technology, Wadala (E)",
+    "description": "Built an AI-powered educational platform called DeepLearn that helps students quickly grasp and revise complex topics through interactive videos, visual notes, flowcharts, and personalized study plans.",
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=100&h=100&fit=crop",
+    "links": [
+      { "label": "Certificate", "url": "#", "icon": "triangle" }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Prakalp 3.0",
+    "timeline": "19th April 2025",
+    "location": "FR. CRCE, Bandra(W)",
+    "description": "Built an AI-powered educational platform called DeepLearn that helps students quickly grasp and revise complex topics through interactive videos, visual notes, flowcharts, and personalized study plans.",
+    "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=100&h=100&fit=crop",
+    "links": []
+  }
+]

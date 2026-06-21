@@ -1,0 +1,43 @@
+[
+  {
+    "id": 1,
+    "company": "Vercel",
+    "role": "Senior Frontend Engineer",
+    "location": "Remote, US",
+    "timeline": "June 2024 - Present",
+    "description": "Leading design engineering and development of developer dashboard tools, focusing on speed, analytics, and responsive design systems.",
+    "bullets": [
+      "Refactored high-traffic pages, dropping Core Web Vitals LCP by 400ms globally.",
+      "Collaborated on Next.js design systems, ensuring perfect WAI-ARIA and keyboard navigation compliance.",
+      "Engineered high-performance real-time visualization widgets for edge network analytics."
+    ],
+    "technologies": ["React.js", "Next.js", "Tailwind CSS", "Framer Motion", "GraphQL"]
+  },
+  {
+    "id": 2,
+    "company": "Linear App",
+    "role": "Frontend Developer",
+    "location": "San Francisco, CA",
+    "timeline": "Jan 2022 - May 2024",
+    "description": "Maintained and optimized the issue tracking board interface with a focus on keyboard-first navigation and custom canvas components.",
+    "bullets": [
+      "Designed and coded custom lists with windowed layout trees to handle 10,000+ issues smoothly.",
+      "Implemented advanced keyboard shortcut engine to allow full app navigation without touching the trackpad.",
+      "Reduced CSS and script bundle overhead by 35% through precise Webpack and rollup modifications."
+    ],
+    "technologies": ["React", "CSS Modules", "Tailwind CSS", "Redux Toolkit", "WebSockets"]
+  },
+  {
+    "id": 3,
+    "company": "Stripe",
+    "role": "Software Engineer Intern",
+    "location": "San Francisco, CA",
+    "timeline": "Jun 2021 - Dec 2021",
+    "description": "Contributed to frontend tooling and standard UI component libraries inside the Stripe checkout integration team.",
+    "bullets": [
+      "Assisted in rebuilding the payment methods modal, increasing accessibility rating to 100/100.",
+      "Wrote integration and automated UI regression tests using Playwright."
+    ],
+    "technologies": ["React", "PostCSS", "REST APIs", "Playwright", "Jest"]
+  }
+]

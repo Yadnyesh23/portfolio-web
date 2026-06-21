@@ -1,0 +1,117 @@
+[
+  {
+    "id": 1,
+    "title": "Aura Design System",
+    "description": "An enterprise-grade component library built for rapid UI development, featuring strict accessibility, high customization, and zero-runtime CSS.",
+    "techStack": ["React", "Tailwind CSS", "Framer Motion", "Radix UI", "Vite"],
+    "github": "https://github.com/nutlope/aura-ui",
+    "liveDemo": "https://aura-ui.vercel.app",
+    "featured": true,
+    "status": "Completed",
+    "image": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1618005198143-e528346d9a59?auto=format&fit=crop&w=800&q=80"
+    ],
+    "tags": ["Design System", "A11y", "Tailwind"],
+    "timeline": "Jan 2026 - Mar 2026",
+    "role": "Lead Design Engineer",
+    "problem": "Engineers at the firm were spending over 30% of their dev cycles writing custom CSS layouts and fixing accessibility bugs for simple modals, dropdowns, and layouts. The lack of standard components created inconsistent interfaces across products.",
+    "solution": "Built Aura UI from the ground up, combining Radix UI primitives for perfect WAI-ARIA compliance with Tailwind CSS. Included a custom theme customizer allowing visual generation of theme tokens that map directly to Tailwind configuration files.",
+    "features": [
+      "WAI-ARIA compliant keyboard navigation out of the box",
+      "Dynamic dark/light styling via CSS Variables",
+      "Framer Motion layout transitions using custom cubic-beziers",
+      "Fully documented with interactive code playgrounds"
+    ],
+    "learnings": [
+      "Radix primitives significantly reduce initial accessibility coding time.",
+      "Bundle size optimization is critical for system adoption; we achieved under 12kb minified+gzipped using tree-shaking."
+    ],
+    "metrics": [
+      "30% reduction in developer UI cycles",
+      "100% WAI-ARIA accessibility compliance score",
+      "12kB total bundle size footprint"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1618005198143-e528346d9a59?auto=format&fit=crop&w=800&q=80"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Vectra Analytics Dashboard",
+    "description": "Real-time log monitoring and database metrics visualization platform powered by React and Canvas-based charts, processing millions of events per second.",
+    "techStack": ["React", "Tailwind CSS", "Recharts", "WebSockets", "Node.js"],
+    "github": "https://github.com/nutlope/vectra-dashboard",
+    "liveDemo": "https://vectra-dashboard.vercel.app",
+    "featured": true,
+    "status": "Completed",
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
+    ],
+    "tags": ["Analytics", "Data Vis", "Realtime"],
+    "timeline": "Oct 2025 - Dec 2025",
+    "role": "Senior React Developer",
+    "problem": "The original analytics UI suffered major rendering lags when plotting more than 10,000 live data points. Chart updates triggered full React renders, blocking the main thread.",
+    "solution": "Rebuilt the rendering layer using canvas-optimized charting and windowing algorithms. Implemented custom WebSocket middleware to throttle incoming state updates, ensuring smooth 60fps renders.",
+    "features": [
+      "High-speed canvas graphing engine supporting 50k+ data points",
+      "WebSocket-driven log stream with status indicators",
+      "Custom date-range aggregation query generator",
+      "Configurable drag-and-drop dashboard grid layout"
+    ],
+    "learnings": [
+      "Throttling state updates is crucial in real-time dashboards; UI refreshes at 100ms intervals look identical to real-time but save 90% CPU.",
+      "Offloading calculations to Web Workers keeps dashboard interactions perfectly responsive."
+    ],
+    "metrics": [
+      "Zero main thread blocking below 50,000 data points",
+      "60fps smooth scrolling during real-time updates",
+      "40% drop in user dashboard page load times"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Pulse Collaborative Editor",
+    "description": "Collaborative, real-time markdown editor with multi-user cursors, live preview, version history, and decentralized sync options.",
+    "techStack": ["React", "Yjs", "WebRTC", "Tailwind CSS", "Framer Motion"],
+    "github": "https://github.com/nutlope/pulse-editor",
+    "liveDemo": "https://pulse-editor.vercel.app",
+    "featured": false,
+    "status": "In Progress",
+    "image": "https://images.unsplash.com/photo-1542435503-956c469947f6?auto=format&fit=crop&w=800&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1542435503-956c469947f6?auto=format&fit=crop&w=800&q=80"
+    ],
+    "tags": ["Collaboration", "Markdown", "CRDT"],
+    "timeline": "Apr 2026 - Present",
+    "role": "Full-Stack Engineer",
+    "problem": "Centralized database synchronization for collaborative writing suffers high latency and single points of failure, making offline document editing complex to synchronize.",
+    "solution": "Built a decentralized collaboration system using conflict-free replicated data types (CRDTs) with Yjs. Synchronized documents via WebRTC with standard signaling server fallback.",
+    "features": [
+      "Real-time cursor presence showing usernames and color indicators",
+      "Offline editing capability with automatic background merging",
+      "Markdown parser with real-time WYSIWYG split preview",
+      "Version history slider with diff comparisons"
+    ],
+    "learnings": [
+      "CRDTs solve distributed synchronization reliably but require careful management of delete operations to prevent document bloat.",
+      "Optimistic UI updates are necessary to hide transport-layer WebRTC latency."
+    ],
+    "metrics": [
+      "Sub-50ms peer-to-peer sync latency",
+      "100% offline document durability",
+      "Support for up to 100 concurrent editors"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1542435503-956c469947f6?auto=format&fit=crop&w=800&q=80"
+    ]
+  }
+]
