@@ -265,24 +265,97 @@ export default function Home() {
           </GhostBtn>
         </motion.div>
 
-        {/* Stats */}
-        <motion.div variants={fadeUp} className="flex flex-wrap gap-10">
-          {[
-            { value: `+${projects.length * 4}`, label: ['YEARS OF', 'EXPERIENCE'] },
-            { value: `+${projects.length}`, label: ['PROJECTS', 'COMPLETED'] },
-            { value: `+${achievements.length}`, label: ['AWARDS &', 'ACHIEVEMENTS'] },
-          ].map((s) => (
-            <div key={s.label[0]}>
-              <div className="font-black text-4xl md:text-5xl" style={{ color: '#FFFFFF' }}>{s.value}</div>
-              <div className="text-[10px] font-mono mt-1.5 leading-tight" style={{ color: '#555555' }}>
-                {s.label[0]}<br />{s.label[1]}
-              </div>
-            </div>
-          ))}
-        </motion.div>
       </Section>
 
-      {/* <div style={{ height: '1px', backgroundColor: '#1A1A1A' }} /> */}
+      <div style={{ height: '1px', backgroundColor: '#1A1A1A' }} />
+
+      {/* ── ABOUT ────────────────────────────────────────────────────── */}
+      <Section id="about" className="pt-16 pb-20">
+        <TwoToneHeading bright="ABOUT" ghost="ME" />
+
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
+          {/* Left */}
+          <div className="space-y-5">
+            <motion.p variants={fadeLeft} className="text-base leading-relaxed" style={{ color: '#888888' }}>
+              Second-year AI & Data Science student at{' '}
+              <a href="https://kjsit.somaiya.edu.in/en" target="_blank" rel="noopener noreferrer" className="hover:underline" style={{ color: '#FFFFFF', fontWeight: 600 }}>KJ Somaiya Institute of Technology</a>
+              . Solving problems with AI-powered solutions.
+              <br /><br />
+              As a freelancer, I've built and deployed over 20+ Telegram chatbots for businesses and individuals - scaling some of them to over 10,000 users.
+              <br /><br />
+              Co-founder of{' '}
+              <a href="https://teslearn.com/" target="_blank" rel="noopener noreferrer" className="hover:underline" style={{ color: '#FFFFFF', fontWeight: 600 }}>TesLearn</a>
+              {' '}— AI-powered learning platform for engineering students, and{' '}
+              <a href="https://makefunnymemes.com/" target="_blank" rel="noopener noreferrer" className="hover:underline" style={{ color: '#FFFFFF', fontWeight: 600 }}>MakeFunnyMemes</a>
+              {' '}— AI meme generator.
+            </motion.p>
+            {/* <motion.p variants={fadeLeft} className="text-base leading-relaxed" style={{ color: '#888888' }}>
+              I thrive at the intersection of{' '}
+              <span style={{ color: '#FFFFFF', fontWeight: 700 }}>Artificial Intelligence</span>
+              {' '}and{' '}
+              <span style={{ color: '#FFFFFF', fontWeight: 700 }}>modern web development</span>,
+              crafting experiences that are not only functional but truly beautiful.
+            </motion.p> */}
+
+            {/* <motion.div variants={fadeLeft} className="grid grid-cols-2 gap-3 pt-2">
+              {[
+                { label: 'Location', value: profile.location },
+                { label: 'Status', value: 'Open to Work' },
+                { label: 'Focus', value: 'AI & Full Stack' },
+                { label: 'Email', value: profile.email, href: `mailto:${profile.email}` },
+              ].map((item) => (
+                <div key={item.label} className="rounded-2xl p-4" style={{ backgroundColor: '#111111', border: '1px solid #1E1E1E' }}>
+                  <p className="text-[10px] font-mono mb-0.5" style={{ color: '#555555' }}>{item.label}</p>
+                  {item.href
+                    ? <a href={item.href} className="text-sm font-semibold hover:underline" style={{ color: '#FF5500' }}>{item.value}</a>
+                    : <p className="text-sm font-semibold" style={{ color: '#FFFFFF' }}>{item.value}</p>}
+                </div>
+              ))}
+            </motion.div> */}
+          </div>
+
+          {/* Right — passion list */}
+          <motion.div variants={stagger} className="space-y-3">
+            <motion.div variants={fadeLeft} className="grid grid-cols-2 gap-3 pt-2">
+              {[
+                { label: 'Location', value: profile.location },
+                { label: 'Status', value: 'Open to Work' },
+                { label: 'Focus', value: 'AI & Full Stack' },
+                { label: 'Email', value: profile.email, href: `mailto:${profile.email}` },
+              ].map((item) => (
+                <div key={item.label} className="rounded-2xl p-4" style={{ backgroundColor: '#111111', border: '1px solid #1E1E1E' }}>
+                  <p className="text-[10px] font-mono mb-0.5" style={{ color: '#555555' }}>{item.label}</p>
+                  {item.href
+                    ? <a href={item.href} className="text-sm font-semibold hover:underline" style={{ color: '#FF5500' }}>{item.value}</a>
+                    : <p className="text-sm font-semibold" style={{ color: '#FFFFFF' }}>{item.value}</p>}
+                </div>
+              ))}
+            </motion.div>
+            {/* {[
+              { title: 'Passion for AI', desc: 'Deeply fascinated by machine learning, LLMs, and intelligent systems that push the boundaries of software.' },
+              { title: 'Full Stack Dev', desc: 'From pixel-perfect frontends to robust backends — I love the full spectrum of building software products.' },
+              { title: 'Problem Solving', desc: 'Complex challenges excite me. Curiosity, creativity, and a systematic mindset are my core tools.' },
+              { title: 'Continuous Learning', desc: 'Technology evolves fast, and so do I. Always exploring new tools, concepts, and domains.' },
+            ].map((item, i) => (
+              <motion.div
+                key={item.title}
+                variants={fadeRight}
+                whileHover={{ x: 6, borderColor: '#FF5500' }}
+                className="flex items-start gap-4 rounded-2xl p-5 transition-all"
+                style={{ backgroundColor: '#111111', border: '1px solid #1E1E1E' }}
+              >
+                <div className="w-2 h-2 rounded-full mt-2 shrink-0" style={{ backgroundColor: '#FF5500' }} />
+                <div>
+                  <h4 className="font-bold text-sm mb-1" style={{ color: '#FFFFFF' }}>{item.title}</h4>
+                  <p className="text-xs leading-relaxed" style={{ color: '#888888' }}>{item.desc}</p>
+                </div>
+              </motion.div>
+            ))} */}
+          </motion.div>
+        </div>
+      </Section>
+
+      <div style={{ height: '1px', backgroundColor: '#1A1A1A' }} />
 
       {/* ── PROJECTS ─────────────────────────────────────────────────── */}
       <Section id="projects" className="pt-16 pb-20">
@@ -595,68 +668,6 @@ export default function Home() {
         </div>
       </Section>
 
-      <div style={{ height: '1px', backgroundColor: '#1A1A1A' }} />
-
-      {/* ── ABOUT ────────────────────────────────────────────────────── */}
-      <Section id="about" className="pt-16 pb-20">
-        <TwoToneHeading bright="ABOUT" ghost="ME" />
-
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
-          {/* Left */}
-          <div className="space-y-5">
-            <motion.p variants={fadeLeft} className="text-base leading-relaxed" style={{ color: '#888888' }}>
-              {profile.bio}
-            </motion.p>
-            <motion.p variants={fadeLeft} className="text-base leading-relaxed" style={{ color: '#888888' }}>
-              I thrive at the intersection of{' '}
-              <span style={{ color: '#FFFFFF', fontWeight: 700 }}>Artificial Intelligence</span>
-              {' '}and{' '}
-              <span style={{ color: '#FFFFFF', fontWeight: 700 }}>modern web development</span>,
-              crafting experiences that are not only functional but truly beautiful.
-            </motion.p>
-
-            <motion.div variants={fadeLeft} className="grid grid-cols-2 gap-3 pt-2">
-              {[
-                { label: 'Location', value: profile.location },
-                { label: 'Status', value: 'Open to Work' },
-                { label: 'Focus', value: 'AI & Full Stack' },
-                { label: 'Email', value: profile.email, href: `mailto:${profile.email}` },
-              ].map((item) => (
-                <div key={item.label} className="rounded-2xl p-4" style={{ backgroundColor: '#111111', border: '1px solid #1E1E1E' }}>
-                  <p className="text-[10px] font-mono mb-0.5" style={{ color: '#555555' }}>{item.label}</p>
-                  {item.href
-                    ? <a href={item.href} className="text-sm font-semibold hover:underline" style={{ color: '#FF5500' }}>{item.value}</a>
-                    : <p className="text-sm font-semibold" style={{ color: '#FFFFFF' }}>{item.value}</p>}
-                </div>
-              ))}
-            </motion.div>
-          </div>
-
-          {/* Right — passion list */}
-          <motion.div variants={stagger} className="space-y-3">
-            {[
-              { title: 'Passion for AI', desc: 'Deeply fascinated by machine learning, LLMs, and intelligent systems that push the boundaries of software.' },
-              { title: 'Full Stack Dev', desc: 'From pixel-perfect frontends to robust backends — I love the full spectrum of building software products.' },
-              { title: 'Problem Solving', desc: 'Complex challenges excite me. Curiosity, creativity, and a systematic mindset are my core tools.' },
-              { title: 'Continuous Learning', desc: 'Technology evolves fast, and so do I. Always exploring new tools, concepts, and domains.' },
-            ].map((item, i) => (
-              <motion.div
-                key={item.title}
-                variants={fadeRight}
-                whileHover={{ x: 6, borderColor: '#FF5500' }}
-                className="flex items-start gap-4 rounded-2xl p-5 transition-all"
-                style={{ backgroundColor: '#111111', border: '1px solid #1E1E1E' }}
-              >
-                <div className="w-2 h-2 rounded-full mt-2 shrink-0" style={{ backgroundColor: '#FF5500' }} />
-                <div>
-                  <h4 className="font-bold text-sm mb-1" style={{ color: '#FFFFFF' }}>{item.title}</h4>
-                  <p className="text-xs leading-relaxed" style={{ color: '#888888' }}>{item.desc}</p>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </Section>
 
       <div style={{ height: '1px', backgroundColor: '#1A1A1A' }} />
 

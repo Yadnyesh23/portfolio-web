@@ -2,7 +2,6 @@
   "Programming Languages": [
     { "name": "Python", "level": "Expert" },
     { "name": "JavaScript", "level": "Expert" },
-    { "name": "TypeScript", "level": "Advanced" },
     { "name": "SQL", "level": "Advanced" },
     { "name": "C++", "level": "Intermediate" }
   ],
@@ -28,10 +27,9 @@
     { "name": "Flask", "level": "Intermediate" }
   ],
   "Databases": [
-    { "name": "PostgreSQL", "level": "Advanced" },
+    { "name": "MySQL", "level": "Advanced" },
     { "name": "MongoDB", "level": "Advanced" },
-    { "name": "Redis", "level": "Intermediate" },
-    { "name": "Pinecone", "level": "Intermediate" }
+    { "name": "Redis", "level": "Intermediate" }
   ],
   "Tools & Technologies": [
     { "name": "Git & GitHub", "level": "Expert" },

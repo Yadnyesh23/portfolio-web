@@ -57,41 +57,44 @@ export default function ProfileCard() {
         </div>
 
         {/* Flame Badge overlapping bottom-left of the image */}
-        <div
+        {/* <div
           className="absolute left-6 -bottom-4 w-9 h-9 rounded-full flex items-center justify-center shadow-md z-20"
           style={{ backgroundColor: '#FF5500', border: '3px solid white' }}
         >
           <Flame className="w-[16px] h-[16px] text-white" />
-        </div>
+        </div> */}
       </div>
 
       {/* Info Area */}
-      <div className="px-6 pt-8 pb-6 text-center bg-transparent relative z-10">
+      <div className="px-6 pt-7 pb-6 text-center bg-transparent relative z-10 flex flex-col items-center">
+        {/* Greeting */}
+        <p className="text-[12px] font-medium mb-1" style={{ color: '#888888' }}>
+          Hello, I'm 👋
+        </p>
+
         {/* Name */}
-        <h2 className="font-black text-[19px] text-black leading-tight mb-3">
-          {profile.name}
+        <h2 className="font-black text-[22px] text-black leading-none tracking-tight mb-4">
+          Yadnyesh H. Halde
         </h2>
 
-        {/* Dashed divider */}
+        {/* Accent divider */}
         <div
-          className="mx-auto mb-4"
+          className="mb-5"
           style={{
-            width: '75%',
-            height: '1px',
-            background:
-              'repeating-linear-gradient(90deg, #FF5500 0px, #FF5500 6px, transparent 6px, transparent 13px)',
-            opacity: 0.35,
+            width: '32px',
+            height: '2px',
+            backgroundColor: '#FF5500',
+            borderRadius: '2px',
           }}
         />
 
         {/* Bio */}
         <p
-          className="text-[11.5px] leading-relaxed mb-5"
-          style={{ color: '#888888' }}
+          className="text-[13px] leading-[1.6] mb-7 font-medium"
+          style={{ color: '#444444' }}
         >
-          {profile.bio.length > 100
-            ? profile.bio.slice(0, 100) + '…'
-            : profile.bio}
+          Still a 2nd-year AI engineering student,<br />
+          already building products like a founder.
         </p>
 
         {/* Social Icons */}

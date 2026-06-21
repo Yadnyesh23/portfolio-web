@@ -4,11 +4,11 @@ import { motion } from 'framer-motion';
 
 const navItems = [
   { id: 'home',       icon: Home,          label: 'Home' },
+  { id: 'about',      icon: User,          label: 'About' },
   { id: 'projects',   icon: FolderOpen,    label: 'Projects' },
   { id: 'skills',     icon: Cpu,           label: 'Skills' },
   { id: 'education',  icon: GraduationCap, label: 'Education' },
   { id: 'hackathons', icon: Zap,           label: 'Hackathons' },
-  { id: 'about',      icon: User,          label: 'About' },
   { id: 'contact',    icon: Mail,          label: 'Contact' },
 ];
 
