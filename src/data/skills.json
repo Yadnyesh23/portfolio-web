@@ -3,9 +3,15 @@
     { "name": "Python", "level": "Expert" },
     { "name": "JavaScript", "level": "Expert" },
     { "name": "SQL", "level": "Advanced" },
-    { "name": "C++", "level": "Intermediate" }
+    { "name": "C++", "level": "Intermediate" },
+    { "name": "C", "level": "Intermediate" }
   ],
+
   "AI & Machine Learning": [
+    { "name": "Numpy", "level": "Advanced" },
+    { "name": "Pandas", "level": "Advanced" },
+    { "name": "Matplotlib", "level": "Advanced" },
+    { "name": "Seaborn", "level": "Advanced" },
     { "name": "TensorFlow", "level": "Advanced" },
     { "name": "PyTorch", "level": "Advanced" },
     { "name": "scikit-learn", "level": "Expert" },
@@ -15,7 +21,6 @@
   ],
   "Frontend": [
     { "name": "React.js", "level": "Expert" },
-    { "name": "Next.js", "level": "Advanced" },
     { "name": "Tailwind CSS", "level": "Expert" },
     { "name": "Framer Motion", "level": "Advanced" },
     { "name": "HTML5 / CSS3", "level": "Expert" }
@@ -24,19 +29,18 @@
     { "name": "Node.js", "level": "Advanced" },
     { "name": "FastAPI", "level": "Advanced" },
     { "name": "Express.js", "level": "Advanced" },
-    { "name": "Flask", "level": "Intermediate" }
+    { "name": "DRF", "level": "Intermediate" }
   ],
   "Databases": [
     { "name": "MySQL", "level": "Advanced" },
     { "name": "MongoDB", "level": "Advanced" },
-    { "name": "Redis", "level": "Intermediate" }
+    { "name": "Redis", "level": "Intermediate" },
+    { "name": "SQLite", "level": "Intermediate" }
   ],
   "Tools & Technologies": [
     { "name": "Git & GitHub", "level": "Expert" },
     { "name": "Docker", "level": "Intermediate" },
     { "name": "Jupyter Notebook", "level": "Expert" },
-    { "name": "Figma", "level": "Advanced" },
-    { "name": "VS Code", "level": "Expert" },
-    { "name": "Vercel", "level": "Expert" }
+    { "name": "Streamlit", "level": "Intermediate" }
   ]
 }

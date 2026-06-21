@@ -3,7 +3,7 @@ import { Github, Linkedin, Twitter, Mail, Flame } from 'lucide-react';
 import { motion } from 'framer-motion';
 import profile from '../data/profile.json';
 import socials from '../data/socials.json';
-import pfp from '../assets/pfp.png';
+import pfp from '../assets/pfp2.jpeg';
 
 export default function ProfileCard() {
   const socialLinks = [

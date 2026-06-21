@@ -12,7 +12,7 @@ import projects from '../data/projects.json';
 import skills from '../data/skills.json';
 import education from '../data/education.json';
 import socials from '../data/socials.json';
-import achievements from '../data/achievements.json';
+import certificates from '../data/certifications.json';
 import hackathons from '../data/hackathons.json';
 
 // ── Framer Motion Variants ────────────────────────────────────────────────────
@@ -199,6 +199,60 @@ function ProjectModal({ project, onClose }) {
 
 const catIcon = { 'Programming Languages': Braces, 'AI & Machine Learning': Cpu, 'Frontend': Layers, 'Backend': Code2, 'Databases': Database, 'Tools & Technologies': Wrench };
 const levelPct = { Expert: 95, Advanced: 78, Intermediate: 55 };
+
+// Add mapping for Simple Icons slugs
+const skillToIconSlug = {
+  'Python': 'python',
+  'JavaScript': 'javascript',
+  'SQL': 'mysql',
+  'C++': 'cplusplus',
+  'C': 'c',
+  'Numpy': 'numpy',
+  'Pandas': 'pandas',
+  'Matplotlib': 'python',
+  'Seaborn': 'python',
+  'TensorFlow': 'tensorflow',
+  'PyTorch': 'pytorch',
+  'scikit-learn': 'scikitlearn',
+  'OpenAI API': 'openai',
+  'LangChain': 'langchain',
+  'Hugging Face': 'huggingface',
+  'React.js': 'react',
+  'Tailwind CSS': 'tailwindcss',
+  'Framer Motion': 'framer',
+  'HTML5 / CSS3': 'html5',
+  'Node.js': 'nodedotjs',
+  'FastAPI': 'fastapi',
+  'Express.js': 'express',
+  'DRF': 'django',
+  'MySQL': 'mysql',
+  'MongoDB': 'mongodb',
+  'Redis': 'redis',
+  'SQLite': 'sqlite',
+  'Git & GitHub': 'github',
+  'Docker': 'docker',
+  'Jupyter Notebook': 'jupyter',
+  'Streamlit': 'streamlit'
+};
+
+function SkillIcon({ skillName, category, className, style }) {
+  const [error, setError] = useState(false);
+  const Icon = catIcon[category] || Sparkles;
+  const slug = skillToIconSlug[skillName];
+
+  if (!slug || error) {
+    return <Icon className={className} style={style} />;
+  }
+
+  return (
+    <img
+      src={`https://cdn.simpleicons.org/${slug}`}
+      alt={skillName}
+      className={className}
+      onError={() => setError(true)}
+    />
+  );
+}
 
 // ── Home Page ─────────────────────────────────────────────────────────────────
 
@@ -411,15 +465,29 @@ export default function Home() {
                 </motion.div>
               </div>
 
-              {/* Status dot */}
-              {project.featured && (
-                <span
-                  className="absolute top-3 right-12 text-[9px] font-mono font-bold px-2 py-0.5 rounded-full"
-                  style={{ backgroundColor: 'rgba(255,85,0,0.12)', color: '#FF5500', border: '1px solid rgba(255,85,0,0.25)' }}
-                >
-                  FEATURED
-                </span>
-              )}
+              {/* Badges container */}
+              <div className="absolute top-3 right-12 flex items-center gap-2">
+                {project.status && (
+                  <span
+                    className="text-[9px] font-mono font-bold px-2 py-0.5 rounded-full uppercase"
+                    style={{
+                      backgroundColor: project.status.toLowerCase() === 'completed' ? 'rgba(74,222,128,0.12)' : 'rgba(59,130,246,0.12)',
+                      color: project.status.toLowerCase() === 'completed' ? '#4ADE80' : '#3B82F6',
+                      border: project.status.toLowerCase() === 'completed' ? '1px solid rgba(74,222,128,0.25)' : '1px solid rgba(59,130,246,0.25)'
+                    }}
+                  >
+                    {project.status}
+                  </span>
+                )}
+                {project.featured && (
+                  <span
+                    className="text-[9px] font-mono font-bold px-2 py-0.5 rounded-full"
+                    style={{ backgroundColor: 'rgba(255,85,0,0.12)', color: '#FF5500', border: '1px solid rgba(255,85,0,0.25)' }}
+                  >
+                    FEATURED
+                  </span>
+                )}
+              </div>
             </motion.div>
           ))}
         </motion.div>
@@ -465,7 +533,6 @@ export default function Home() {
             className="grid grid-cols-1 sm:grid-cols-2 gap-3"
           >
             {(skills[activeSkillCat] || []).map((skill, i) => {
-              const Icon = catIcon[activeSkillCat] || Sparkles;
               const pct = levelPct[skill.level] || 55;
               return (
                 <motion.div
@@ -482,7 +549,7 @@ export default function Home() {
                     className="w-11 h-11 rounded-xl flex items-center justify-center shrink-0"
                     style={{ backgroundColor: '#1A1A1A', border: '1px solid #222222' }}
                   >
-                    <Icon className="w-5 h-5" style={{ color: '#FF5500' }} />
+                    <SkillIcon skillName={skill.name} category={activeSkillCat} className="w-5 h-5 object-contain" style={{ color: '#FF5500' }} />
                   </div>
 
                   {/* Info */}
@@ -558,10 +625,10 @@ export default function Home() {
 
         {/* Achievements */}
         <motion.p variants={fadeUp} className="text-xs font-mono uppercase tracking-widest mb-5" style={{ color: '#555555' }}>
-          Awards & Certifications
+          Certifications
         </motion.p>
         <motion.div variants={stagger} className="grid sm:grid-cols-2 gap-4">
-          {achievements.map((a) => (
+          {certificates.map((a) => (
             <motion.div
               key={a.id}
               variants={scaleIn}
@@ -570,17 +637,15 @@ export default function Home() {
               style={{ backgroundColor: '#111111', border: '1px solid #1E1E1E' }}
             >
               <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0"
-                style={{ backgroundColor: a.type === 'hackathon' ? 'rgba(255,215,0,0.08)' : 'rgba(255,85,0,0.08)', border: '1px solid ' + (a.type === 'hackathon' ? 'rgba(255,215,0,0.2)' : 'rgba(255,85,0,0.2)') }}>
-                {a.type === 'hackathon'
-                  ? <Trophy className="w-5 h-5" style={{ color: '#FFD700' }} />
-                  : <Award className="w-5 h-5" style={{ color: '#FF5500' }} />}
+                style={{ backgroundColor: 'rgba(255,85,0,0.08)', border: '1px solid rgba(255,85,0,0.2)' }}>
+                <Award className="w-5 h-5" style={{ color: '#FF5500' }} />
               </div>
               <div className="flex-1 min-w-0">
                 <p className="font-bold text-sm leading-tight mb-1" style={{ color: '#FFFFFF' }}>{a.title}</p>
-                <p className="text-xs font-mono" style={{ color: '#555555' }}>{a.issuer} · {a.date}</p>
+                <p className="text-xs font-mono" style={{ color: '#555555' }}>{a.issuer} · {a.issued}</p>
                 {a.description && <p className="text-xs mt-1.5 leading-relaxed" style={{ color: '#666666' }}>{a.description}</p>}
-                {a.verifyLink && (
-                  <a href={a.verifyLink} target="_blank" rel="noopener noreferrer"
+                {a.credentialUrl && (
+                  <a href={a.credentialUrl} target="_blank" rel="noopener noreferrer"
                     className="inline-flex items-center gap-1 text-xs font-mono mt-2 hover:underline"
                     style={{ color: '#FF5500' }}>
                     Verify <ArrowUpRight className="w-3 h-3" />

@@ -107,20 +107,22 @@ export default function HackathonsCertifications() {
                   </div>
                   <span className="text-[10px] font-mono text-neutral-400 flex items-center gap-1">
                     <Calendar className="w-3.5 h-3.5" />
-                    {cert.date}
+                    {cert.issued || cert.date}
                   </span>
                 </div>
 
-                <div className="space-y-1 text-xs">
-                  <div className="text-[10px] font-mono text-neutral-400 uppercase flex items-center gap-1">
-                    <Verified className="w-3 h-3 text-emerald-500" />
-                    ID: {cert.credentialId}
+                {cert.credentialId && (
+                  <div className="space-y-1 text-xs">
+                    <div className="text-[10px] font-mono text-neutral-400 uppercase flex items-center gap-1">
+                      <Verified className="w-3 h-3 text-emerald-500" />
+                      ID: {cert.credentialId}
+                    </div>
                   </div>
-                </div>
+                )}
 
                 <div className="pt-1">
                   <a
-                    href={cert.verifyLink}
+                    href={cert.credentialUrl || cert.verifyLink}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1 text-[10px] font-mono text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white transition-colors border border-neutral-200 dark:border-neutral-850 px-2 py-0.5 rounded bg-neutral-50/50 dark:bg-neutral-950/50"

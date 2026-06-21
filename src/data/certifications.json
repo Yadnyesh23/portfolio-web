@@ -1,18 +1,16 @@
 [
   {
     "id": 1,
-    "title": "AWS Certified Solutions Architect",
-    "issuer": "Amazon Web Services (AWS)",
-    "date": "Aug 2025",
-    "credentialId": "AWS-ASA-998877",
-    "verifyLink": "https://aws.amazon.com/verification"
+    "title": "Python Programming Bootcamp",
+    "issuer": "Udemy",
+    "issued": "6 June 2026",
+    "credentialUrl": "https://www.udemy.com/certificate/UC-623e5113-04db-4273-a1eb-7352a75fa46b/"
   },
   {
     "id": 2,
-    "title": "React Advanced Security & Performance Certification",
-    "issuer": "Frontend Masters",
-    "date": "Jan 2025",
-    "credentialId": "FM-RSP-112233",
-    "verifyLink": "https://frontendmasters.com/certificates"
+    "title": "The Complete Web Development Bootcamp",
+    "issuer": "Udemy",
+    "issued": "22 June 2026",
+    "credentialUrl": "https://www.udemy.com/certificate/UC-7d617041-b48a-4c59-b964-65557b612124/"
   }
 ]
