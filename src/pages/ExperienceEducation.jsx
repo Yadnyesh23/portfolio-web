@@ -132,16 +132,28 @@ export default function ExperienceEducation() {
                     <GraduationCap className="w-2.5 h-2.5" />
                   </div>
 
-                  <div className="space-y-2">
+                  <a
+                    href={edu.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block space-y-2 hover:opacity-90 transition-opacity cursor-pointer"
+                  >
                     {/* Header */}
-                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-1">
-                      <div>
-                        <h3 className="text-sm font-semibold text-neutral-900 dark:text-white">
-                          {edu.degree} in {edu.major}
-                        </h3>
-                        <span className="text-xs text-neutral-500 dark:text-neutral-400 font-mono">
-                          {edu.institution}
-                        </span>
+                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-2">
+                      <div className="flex items-center gap-3">
+                        {edu.img_url && (
+                          <div className="w-8 h-8 rounded-lg overflow-hidden shrink-0 bg-white border border-neutral-200 dark:border-neutral-850 flex items-center justify-center">
+                            <img src={edu.img_url} alt={edu.institution} className="w-full h-full object-contain p-0.5" />
+                          </div>
+                        )}
+                        <div>
+                          <h3 className="text-sm font-semibold text-neutral-900 dark:text-white">
+                            {edu.degree}{edu.major ? ` in ${edu.major}` : ''}
+                          </h3>
+                          <span className="text-xs text-neutral-500 dark:text-neutral-400 font-mono">
+                            {edu.institution}
+                          </span>
+                        </div>
                       </div>
                       
                       <div className="flex flex-wrap gap-x-3 text-[10px] font-mono text-neutral-400">
@@ -162,11 +174,13 @@ export default function ExperienceEducation() {
                     </p>
 
                     {/* GPA */}
-                    <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded border border-neutral-200 dark:border-neutral-850 text-[10px] font-mono text-neutral-500">
-                      <span>GPA:</span>
-                      <span className="font-semibold text-neutral-850 dark:text-neutral-200">{edu.gpa}</span>
-                    </div>
-                  </div>
+                    {edu.gpa && (
+                      <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded border border-neutral-200 dark:border-neutral-850 text-[10px] font-mono text-neutral-500">
+                        <span>GPA:</span>
+                        <span className="font-semibold text-neutral-850 dark:text-neutral-200">{edu.gpa}</span>
+                      </div>
+                    )}
+                  </a>
                 </div>
               ))}
             </motion.div>

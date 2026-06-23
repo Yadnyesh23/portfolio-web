@@ -279,7 +279,7 @@ export default function Home() {
       {/* ── HERO ─────────────────────────────────────────────────────── */}
       <Section id="home" className="pt-16 pb-20 min-h-[85vh] flex flex-col justify-center">
         {/* Mobile profile strip (only on small screens) */}
-        <motion.div variants={fadeUp} className="flex lg:hidden items-center gap-4 mb-10 p-4 rounded-2xl" style={{ backgroundColor: '#111111', border: '1px solid #1E1E1E' }}>
+        {/* <motion.div variants={fadeUp} className="flex lg:hidden items-center gap-4 mb-10 p-4 rounded-2xl" style={{ backgroundColor: '#111111', border: '1px solid #1E1E1E' }}>
           <div className="w-12 h-12 rounded-full flex items-center justify-center text-xl font-black text-white" style={{ backgroundColor: '#FF5500' }}>
             {profile.name.charAt(0)}
           </div>
@@ -287,7 +287,7 @@ export default function Home() {
             <p className="font-bold text-sm">{profile.name}</p>
             <p className="text-xs" style={{ color: '#888888' }}>{profile.status}</p>
           </div>
-        </motion.div>
+        </motion.div> */}
 
         {/* Availability tag */}
         <motion.div variants={fadeUp} className="inline-flex items-center gap-2 mb-6">
@@ -380,7 +380,7 @@ export default function Home() {
                 <div key={item.label} className="rounded-2xl p-4" style={{ backgroundColor: '#111111', border: '1px solid #1E1E1E' }}>
                   <p className="text-[10px] font-mono mb-0.5" style={{ color: '#555555' }}>{item.label}</p>
                   {item.href
-                    ? <a href={item.href} className="text-sm font-semibold hover:underline" style={{ color: '#FF5500' }}>{item.value}</a>
+                    ? <a href={item.href} className="text-sm font-semibold hover:underline break-all" style={{ color: '#FF5500' }}>{item.value}</a>
                     : <p className="text-sm font-semibold" style={{ color: '#FFFFFF' }}>{item.value}</p>}
                 </div>
               ))}
@@ -440,9 +440,33 @@ export default function Home() {
 
               {/* Info */}
               <div className="flex-1 min-w-0">
-                <h3 className="font-bold text-base mb-0.5 truncate" style={{ color: '#FFFFFF' }}>
-                  {project.title}
-                </h3>
+                <div className="flex flex-wrap items-center gap-2 mb-1">
+                  <h3 className="font-bold text-base truncate" style={{ color: '#FFFFFF' }}>
+                    {project.title}
+                  </h3>
+                  <div className="flex flex-wrap items-center gap-1.5 shrink-0">
+                    {project.status && (
+                      <span
+                        className="text-[8px] font-mono font-bold px-2 py-0.5 rounded-full uppercase"
+                        style={{
+                          backgroundColor: project.status.toLowerCase() === 'completed' ? 'rgba(74,222,128,0.12)' : 'rgba(59,130,246,0.12)',
+                          color: project.status.toLowerCase() === 'completed' ? '#4ADE80' : '#3B82F6',
+                          border: project.status.toLowerCase() === 'completed' ? '1px solid rgba(74,222,128,0.25)' : '1px solid rgba(59,130,246,0.25)'
+                        }}
+                      >
+                        {project.status}
+                      </span>
+                    )}
+                    {project.featured && (
+                      <span
+                        className="text-[8px] font-mono font-bold px-2 py-0.5 rounded-full"
+                        style={{ backgroundColor: 'rgba(255,85,0,0.12)', color: '#FF5500', border: '1px solid rgba(255,85,0,0.25)' }}
+                      >
+                        FEATURED
+                      </span>
+                    )}
+                  </div>
+                </div>
                 <p className="text-sm truncate" style={{ color: '#888888' }}>
                   {project.description.slice(0, 70)}…
                 </p>
@@ -463,30 +487,6 @@ export default function Home() {
                 >
                   <ArrowUpRight className="w-5 h-5" />
                 </motion.div>
-              </div>
-
-              {/* Badges container */}
-              <div className="absolute top-3 right-12 flex items-center gap-2">
-                {project.status && (
-                  <span
-                    className="text-[9px] font-mono font-bold px-2 py-0.5 rounded-full uppercase"
-                    style={{
-                      backgroundColor: project.status.toLowerCase() === 'completed' ? 'rgba(74,222,128,0.12)' : 'rgba(59,130,246,0.12)',
-                      color: project.status.toLowerCase() === 'completed' ? '#4ADE80' : '#3B82F6',
-                      border: project.status.toLowerCase() === 'completed' ? '1px solid rgba(74,222,128,0.25)' : '1px solid rgba(59,130,246,0.25)'
-                    }}
-                  >
-                    {project.status}
-                  </span>
-                )}
-                {project.featured && (
-                  <span
-                    className="text-[9px] font-mono font-bold px-2 py-0.5 rounded-full"
-                    style={{ backgroundColor: 'rgba(255,85,0,0.12)', color: '#FF5500', border: '1px solid rgba(255,85,0,0.25)' }}
-                  >
-                    FEATURED
-                  </span>
-                )}
               </div>
             </motion.div>
           ))}
@@ -522,7 +522,7 @@ export default function Home() {
           })}
         </motion.div>
 
-        {/* Tools grid — matching reference image 3 layout */}
+        {/* Tools grid */}
         <AnimatePresence mode="wait">
           <motion.div
             key={activeSkillCat}
@@ -530,23 +530,22 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.35 }}
-            className="grid grid-cols-1 sm:grid-cols-2 gap-3"
+            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3"
           >
             {(skills[activeSkillCat] || []).map((skill, i) => {
-              const pct = levelPct[skill.level] || 55;
               return (
                 <motion.div
                   key={skill.name}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.06 }}
-                  whileHover={{ borderColor: '#FF5500', backgroundColor: '#141414' }}
-                  className="flex items-center gap-4 px-5 py-4 rounded-2xl transition-all"
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: i * 0.04 }}
+                  whileHover={{ borderColor: '#FF5500', backgroundColor: '#141414', y: -2 }}
+                  className="flex items-center gap-3 px-4 py-3 rounded-2xl transition-all"
                   style={{ backgroundColor: '#111111', border: '1px solid #1E1E1E' }}
                 >
                   {/* Icon square */}
                   <div
-                    className="w-11 h-11 rounded-xl flex items-center justify-center shrink-0"
+                    className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0"
                     style={{ backgroundColor: '#1A1A1A', border: '1px solid #222222' }}
                   >
                     <SkillIcon skillName={skill.name} category={activeSkillCat} className="w-5 h-5 object-contain" style={{ color: '#FF5500' }} />
@@ -554,20 +553,7 @@ export default function Home() {
 
                   {/* Info */}
                   <div className="flex-1 min-w-0">
-                    <p className="font-bold text-sm mb-1" style={{ color: '#FFFFFF' }}>{skill.name}</p>
-                    <div className="flex items-center gap-2">
-                      <div className="flex-1 h-1 rounded-full" style={{ backgroundColor: '#1E1E1E' }}>
-                        <motion.div
-                          initial={{ width: 0 }}
-                          whileInView={{ width: `${pct}%` }}
-                          viewport={{ once: true }}
-                          transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: i * 0.04 }}
-                          className="h-full rounded-full"
-                          style={{ backgroundColor: '#FF5500' }}
-                        />
-                      </div>
-                      <span className="text-[10px] font-mono shrink-0" style={{ color: '#555555' }}>{skill.level}</span>
-                    </div>
+                    <p className="font-bold text-sm truncate" style={{ color: '#FFFFFF' }}>{skill.name}</p>
                   </div>
                 </motion.div>
               );
@@ -584,19 +570,26 @@ export default function Home() {
 
         <div className="grid md:grid-cols-2 gap-5 mb-10">
           {education.map((edu, i) => (
-            <motion.div
+            <motion.a
               key={edu.id}
+              href={edu.link}
+              target="_blank"
+              rel="noopener noreferrer"
               variants={i % 2 === 0 ? fadeLeft : fadeRight}
               whileHover={{ borderColor: '#FF5500', y: -4 }}
-              className="rounded-3xl p-7 relative overflow-hidden transition-all"
+              className="rounded-3xl p-7 relative overflow-hidden transition-all block cursor-pointer"
               style={{ backgroundColor: '#111111', border: '1px solid #1E1E1E' }}
             >
               {/* Accent corner decoration */}
               <div className="absolute top-0 right-0 w-20 h-20 rounded-bl-full opacity-10" style={{ backgroundColor: '#FF5500' }} />
 
               <div className="flex items-start gap-4 mb-5">
-                <div className="w-11 h-11 rounded-xl flex items-center justify-center shrink-0" style={{ backgroundColor: 'rgba(255,85,0,0.1)', border: '1px solid rgba(255,85,0,0.25)' }}>
-                  <GraduationCap className="w-5 h-5" style={{ color: '#FF5500' }} />
+                <div className="w-11 h-11 rounded-xl flex items-center justify-center shrink-0 overflow-hidden bg-white dark:bg-neutral-900" style={{ border: '1px solid rgba(255,85,0,0.25)' }}>
+                  {edu.img_url ? (
+                    <img src={edu.img_url} alt={edu.institution} className="w-full h-full object-contain p-1" />
+                  ) : (
+                    <GraduationCap className="w-5 h-5" style={{ color: '#FF5500' }} />
+                  )}
                 </div>
                 <div>
                   <h3 className="font-black text-base leading-tight" style={{ color: '#FFFFFF' }}>{edu.institution}</h3>
@@ -604,7 +597,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <p className="text-sm mb-3" style={{ color: '#888888' }}>{edu.major}</p>
+              {edu.major && <p className="text-sm mb-3" style={{ color: '#888888' }}>{edu.major}</p>}
 
               <div className="flex flex-wrap gap-3 mb-4">
                 <span className="text-xs font-mono flex items-center gap-1" style={{ color: '#555555' }}>
@@ -619,7 +612,7 @@ export default function Home() {
               </div>
 
               <p className="text-xs leading-relaxed" style={{ color: '#666666' }}>{edu.description}</p>
-            </motion.div>
+            </motion.a>
           ))}
         </div>
 
