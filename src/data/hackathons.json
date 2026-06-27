@@ -5,7 +5,7 @@
     "timeline": "17th-18th April 2026",
     "location": "The ITM Group of Institutions is a group of educational institutions, Kharghar",
     "description": "Finalist (Top 10). Built an AI-powered unified inbox platform that connects email, Slack, WhatsApp, calendar, and other communication channels into a single intelligent workspace.The AI continuously monitors conversations, prioritizes important messages, summarizes discussions, extracts action items, schedules meetings, sends follow-ups, and automates routine tasks on behalf of the user.",
-    "image": "src/assets/hackathons/summerhacks/logo.png",
+    "image": "/assets/hackathons/summerhacks/logo.png",
     "links": [
       { "label": "Demo", "url": "https://www.youtube.com/watch?v=VGRlS12wuhk", "icon": "play" },
       { "label": "Certificate", "url": "#", "icon": "triangle" }
@@ -17,9 +17,9 @@
     "timeline": "21st December 2025",
     "location": "VasantDada Patil Pratisthan's College of Engineering, Sion",
     "description": "Finalist. Built teslearn.com a personalised learning platform for students (celebirty podcasts, comic books, animation video lessons, mindmaps, etc)",
-    "image": "src/assets/hackathons/hacktheflame/logo.png",
+    "image": "/assets/hackathons/hacktheflame/logo.png",
     "links": [
-      { "label": "Certificate", "url": "src/assets/hackathons/hacktheflame/certificate.png", "icon": "triangle" }
+      { "label": "Certificate", "url": "/assets/hackathons/hacktheflame/certificate.png", "icon": "triangle" }
     ]
   },
   {
@@ -28,11 +28,11 @@
     "timeline": "4th-5th October 2025",
     "location": "Somaiya University, Vidhyavihar",
     "description": "2nd Runner Up. Built teslearn.com a personalised learning platform for students (celebirty podcasts, comic books, animation video lessons, mindmaps, etc)",
-    "image": "src/assets/hackathons/incuverse/logo.png",
+    "image": "/assets/hackathons/incuverse/logo.png",
     "links": [
       { "label": "Demo", "url": "https://www.youtube.com/watch?v=2dk1_mK2ug8", "icon": "play" },
-      { "label": "Certificate", "url": "src/assets/hackathons/incuverse/certificate.png", "icon": "triangle" },
-      { "label": "Winning Photo", "url": "src/assets/hackathons/incuverse/win.png", "icon": "triangle" }
+      { "label": "Certificate", "url": "/assets/hackathons/incuverse/certificate.png", "icon": "triangle" },
+      { "label": "Winning Photo", "url": "/assets/hackathons/incuverse/win.png", "icon": "triangle" }
     ]
   },
   {
@@ -41,7 +41,7 @@
     "timeline": "19th September 2025",
     "location": "TSEC, Bandra (W)",
     "description": "Built an mini calculator to calculate carbon footprints",
-    "image": "src/assets/hackathons/minithon/image.png",
+    "image": "/assets/hackathons/minithon/image.png",
     "links": [
     ]
   },
@@ -51,9 +51,9 @@
     "timeline": "13th September 2025",
     "location": "VPPCOE, Sion (E)",
     "description": "Built RAPID, an AI powered offline app that helps people before, during, after disaster",
-    "image": "src/assets/hackathons/ideathon/logo.png",
+    "image": "/assets/hackathons/ideathon/logo.png",
     "links": [
-      { "label": "Certificate", "url": "src/assets/hackathons/ideathon/certificate.png", "icon": "triangle" }
+      { "label": "Certificate", "url": "/assets/hackathons/ideathon/certificate.png", "icon": "triangle" }
     ]
   },
   {
@@ -62,7 +62,7 @@
     "timeline": "19th August 2025",
     "location": "Vidyalankar Institute of Technology, Wadala (E)",
     "description": "Built an AI-powered educational platform called DeepLearn that helps students quickly grasp and revise complex topics through interactive videos, visual notes, flowcharts, and personalized study plans.",
-    "image": "src/assets/hackathons/saasLaunchpad/logo.png",
+    "image": "/assets/hackathons/saasLaunchpad/logo.png",
     "links": [
     ]
   },
@@ -72,7 +72,7 @@
     "timeline": "19th April 2025",
     "location": "FR. CRCE, Bandra(W)",
     "description": "Built an AI-powered educational platform called DeepLearn that helps students quickly grasp and revise complex topics through interactive videos, visual notes, flowcharts, and personalized study plans.",
-    "image": "src/assets/hackathons/prakalp/image.png",
+    "image": "/assets/hackathons/prakalp/image.png",
     "links": []
   }
 ]

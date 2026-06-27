@@ -17,11 +17,11 @@
     "featured": false,
     "status": "In Progress",
 
-    "image": "src/assets/teslearn/teslearn_img1.png",
+    "image": "/assets/teslearn/teslearn_img1.png",
     "images": [
-      "src/assets/teslearn/teslearn_img2.png",
-      "src/assets/teslearn/teslearn_img3.png",
-      "src/assets/teslearn/teslearn_img4.png"
+      "/assets/teslearn/teslearn_img2.png",
+      "/assets/teslearn/teslearn_img3.png",
+      "/assets/teslearn/teslearn_img4.png"
     ],
 
     "tags": [
@@ -68,8 +68,8 @@
     ],
 
     "gallery": [
-      "src/assets/teslearn/teslearn_img2.png",
-      "src/assets/teslearn/teslearn_img3.png"
+      "/assets/teslearn/teslearn_img2.png",
+      "/assets/teslearn/teslearn_img3.png"
     ]
   },
   {
@@ -92,10 +92,10 @@
   "featured": true,
   "status": "Completed",
 
-  "image": "src/assets/mfm/mfm_img1.png",
+  "image": "/assets/mfm/mfm_img1.png",
   "images": [
-    "src/assets/mfm/mfm_img2.png",
-    "src/assets/mfm/mfm_img3.png"
+    "/assets/mfm/mfm_img2.png",
+    "/assets/mfm/mfm_img3.png"
   ],
 
   "tags": [
@@ -140,8 +140,8 @@
   ],
 
   "gallery": [
-    "src/assets/mfm/mfm_img2.png",
-    "src/assets/mfm/mfm_img3.png"
+    "/assets/mfm/mfm_img2.png",
+    "/assets/mfm/mfm_img3.png"
   ]
 },
 {
@@ -163,10 +163,10 @@
   "featured": true,
   "status": "Completed",
 
-  "image": "src/assets/opentrek/ot_img1.png",
+  "image": "/assets/opentrek/ot_img1.png",
   "images": [
-    "src/assets/opentrek/ot_img2.png",
-    "src/assets/opentrek/ot_img3.png"
+    "/assets/opentrek/ot_img2.png",
+    "/assets/opentrek/ot_img3.png"
   ],
 
   "tags": [
@@ -211,8 +211,8 @@
   ],
 
   "gallery": [
-    "src/assets/opentrek/ot_img2.png",
-    "src/assets/opentrek/ot_img3.png"
+    "/assets/opentrek/ot_img2.png",
+    "/assets/opentrek/ot_img3.png"
   ]
 }
 ]
