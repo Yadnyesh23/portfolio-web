@@ -14,8 +14,8 @@
     ],
     "github": "https://github.com/Yadnyesh08/TesLearn",
     "liveDemo": "https://teslearn.mariakevin.in/",
-    "featured": false,
-    "status": "In Progress",
+    "featured": true,
+    "status": "Completed",
 
     "image": "/assets/teslearn/teslearn_img1.png",
     "images": [
@@ -89,7 +89,7 @@
   "github": "https://github.com/Yadnyesh08/MakeFunnyMemes",
   "liveDemo": "https://makefunnymemes.com/",
 
-  "featured": true,
+  "featured": false,
   "status": "Completed",
 
   "image": "/assets/mfm/mfm_img1.png",
@@ -160,7 +160,7 @@
   "github": "https://github.com/Yadnyesh23/open-trek-platform/",
   "liveDemo": "https://open-trek-platform-4.onrender.com/",
 
-  "featured": true,
+  "featured": false,
   "status": "Completed",
 
   "image": "/assets/opentrek/ot_img1.png",
