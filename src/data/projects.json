@@ -214,5 +214,81 @@
     "/assets/opentrek/ot_img2.png",
     "/assets/opentrek/ot_img3.png"
   ]
+},
+{
+  "id": 4,
+  "title": "ImageTool",
+  "description": "A free, no-signup image utility that lets anyone remove backgrounds, recolor them, resize, convert formats, and compress images — processed on the fly and never stored on the server.",
+
+  "techStack": [
+    "React",
+    "Vite",
+    "Tailwind CSS",
+    "FastAPI",
+    "Pillow",
+    "rembg"
+  ],
+
+  "github": "https://github.com/Yadnyesh23/ImageTool",
+  "liveDemo": "https://imagetool.haldeyadnyesh.in/",
+
+  "featured": false,
+  "status": "Completed",
+
+  "image": "/assets/imagetool/it_img1.png",
+  "images": [
+    "/assets/imagetool/it_img2.png",
+    "/assets/imagetool/it_img3.png",
+    "/assets/imagetool/it_img4.png",
+    "/assets/imagetool/it_img5.png",
+    "/assets/imagetool/it_img6.png"
+  ],
+
+  "tags": [
+    "Utility",
+    "Computer Vision",
+    "Full Stack",
+    "Privacy-first"
+  ],
+
+  "timeline": "Jul 2026 - Aug 2026",
+
+  "role": "Full Stack Developer",
+
+  "problem": "Most background-removal and image-editing tools online gate full-resolution results behind credit systems, watermark free-tier output, or require an account before you can download anything. On top of that, doing a full edit — remove background, resize, convert format, compress — usually means chaining together two or three separate single-purpose tools.",
+
+  "solution": "Built ImageTool as a single free utility covering five common image operations in one place, with no account required and nothing stored server-side after processing. Images are uploaded, processed in-memory, returned, and discarded — the user gets a full-resolution result and a download link, and the server keeps nothing.",
+
+  "features": [
+    "AI-powered background removal using rembg",
+    "Background recoloring with a custom color picker",
+    "Resize by exact dimensions or a locked aspect ratio",
+    "Format conversion between PNG, JPEG, and WEBP",
+    "Adjustable-quality compression, format-aware (JPEG/WEBP quality vs. PNG compression level)",
+    "Drag-and-drop, click-to-browse, or paste-from-clipboard upload",
+    "No sign-up, no watermarks, no stored files",
+    "Dark/light theme toggle"
+  ],
+
+  "learnings": [
+    "Designed a FastAPI service layer cleanly separating route handlers from image-processing logic.",
+    "Debugged real production issues: mismatched Content-Type headers, silent no-op logic on non-transparent images, and a slow cold-start caused by eagerly importing rembg's full ML dependency chain at module load.",
+    "Fixed Render deployment by lazy-loading rembg so FastAPI can bind its port before the heavy onnxruntime/scipy/scikit-image import chain resolves.",
+    "Built a config-driven frontend where a single generic tool page renders itself from a per-tool schema, instead of duplicating five near-identical pages.",
+    "Set up custom subdomain routing (imagetool.haldeyadnyesh.in) via CNAME on top of a Vercel deployment."
+  ],
+
+  "metrics": [
+    "5 image tools in a single app",
+    "Zero server-side storage — files are processed and discarded",
+    "No account, watermark, or usage cap on results",
+    "Deployed across two services: FastAPI backend on Render, React frontend on Vercel"
+  ],
+
+  "gallery": [
+    "/assets/imagetool/it_img2.png",
+    "/assets/imagetool/it_img3.png"
+  ]
 }
+
 ]
